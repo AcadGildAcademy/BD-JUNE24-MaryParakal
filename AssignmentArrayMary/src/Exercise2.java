@@ -23,13 +23,31 @@ public class Exercise2 {
 		obj.sortArray(intArray);
 		System.out.println(" After sorting");
 		obj.printArray(intArray);
-		System.out.println(" After inserting 11");
-		int newArray[] = obj.insertElement(11,intArray);
+		int found = obj.find(intArray, 1);
+		if (found == 1){
+			System.out.println("Didn't find 1 @ -6");
+			
+		}
+		
+		int newArray[] = obj.insertElement(1,intArray);
+		System.out.println(" After inserting 1 the array length = " + newArray.length);
 		obj.printArray(newArray);
 
 		// TODO Auto-generated method stub
 
 	}
+	public int find(int[] array, int value) {
+	    for(int i=0; i<array.length; i++) 
+	    {
+	         if(array[i] == value){
+	        	 return i;
+	         }
+	         
+	             
+	    }
+	    return 0;
+	}
+	
 	public int[] insertElement (int newElement ,int intArray[]) {
 		int newArray[] = new int [intArray.length+1];
 		int j =0;

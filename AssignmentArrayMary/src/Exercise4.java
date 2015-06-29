@@ -71,9 +71,10 @@ public class Exercise4 {
 			for( int j=0; j < product[0].length; j++) {
 				for (int k =0; k <first[0].length ;k++) {
 					sum = sum + first[i][k]* second[k][j];
-					product[i][j] = sum;
+					
 				}
-				
+				product[i][j] = sum;
+				sum = 0;
 				
 			}
 			
